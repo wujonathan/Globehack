@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+  <meta name="viewport" content="width = device-width, initial-scale = 1">
+  <title>HomeBase</title> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+
+function FP_swapImgRestore() {//v1.0
+ var doc=document,i; if(doc.$imgSwaps) { for(i=0;i<doc.$imgSwaps.length;i++) {
+  var elm=doc.$imgSwaps[i]; if(elm) { elm.src=elm.$src; elm.$src=null; } } 
+  doc.$imgSwaps=null; }
+}
+// -->
+</script>
+<style>
+body {
+    background-color: #272727;
+}
+</style>
+</head> 
+<body onload="FP_preloadImgs(/*url*/'pics/index_02b.png',/*url*/'pics/index_03b.jpg',/*url*/'pics/index_04b.png')">
+  <div class="userCreateDetails">
+    <div>
+      <form id="userCreate">
+        <br> Please Input the details for registering: <br>
+        Username <input type="text"  name="newUsername" id="newUsername">  <br>
+        Password <input type="password"  name="newPassword" id="newPassword">  <br>
+        <input id="submitCreateUser" type="button" name="submit" value="Create User"/>
+      </form>
+      <div id="userCreateMsg"></div> 
+    </div>
+  </div>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <img src="pics/14813087_316060978766619_411250334_o.png">
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><div class="logins">
+        <button id="login" class="logins btn btn-warning" data-tog = "1">Login</button>
+      </div></li>
+        <li><div class="logins">
+        <button id="signup" class="logins btn btn-warning" data-tog = "1">Sign Up</button>
+        <script type="text/javascript">
+            document.getElementById("signup").onclick = function () {
+                location.href = "https://docs.google.com/forms/d/1sYOq-ApMYGzs3jyeZxV0J6LjE43-nxjehWbw0iyIG-8/edit?usp=drive_web";
+              };
+              </script>
+      </div></li>
+        <li><div class="logouts">
+        <div id="loggedUser" data-tog="0"></div>
+        <button class = "btn btn-danger" id="logout">Logout</button>
+      </div></li>
+      </ul>
+    </div>
+  </nav>
+  <div class = "container text-center">
+    <div class = "everything">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="img-wrapper">
+              <a href="/~wujonathan/Step_1/">
+            <img class="img-responsive" src="pics/index_02a.png" width="430" id="img1" alt="index_02a" onmouseout="FP_swapImgRestore()" onmouseover="FP_swapImg(1,1,/*id*/'img1',/*url*/'pics/index_02b.png'); FP_swapImg(1,1,/*id*/'img1',/*url*/'pics/index_02b.png'); FP_swapImg(1,1,/*id*/'img1',/*url*/'pics/index_02b.png')" style="height: 840px"></a>
+            <div class="img-overlay">
+              <button id="step1" class = "btn btn-primary">Find</button>
+              <script type="text/javascript">
+              document.getElementById("step1").onclick = function () {
+                location.href = "/~wujonathan/Step_1/";
+              };
+              </script>
+            </div>
+          </div> 
+        </div>
+        <div class="col-lg-4">
+          <div class="img-wrapper">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfS1M76s_DbMQGE2wzsIJqL5XJ7buAO43hDtiL8CFb2YU2e8Q/viewform?c=0&w=1">
+            <img src="pics/index_03a.jpg" id="img2" alt="index_03a" height="840" onmouseout="FP_swapImgRestore()" onmouseover="FP_swapImg(1,1,/*id*/'img2',/*url*/'pics/index_03b.jpg'); FP_swapImg(1,1,/*id*/'img2',/*url*/'pics/index_03b.jpg')" width="430"></a>
+            <div class="img-overlay">
+              <button id="step2" class = "btn btn-info">Analyze</button>
+              <script type="text/javascript">
+              document.getElementById("step2").onclick = function () {
+                location.href = "https://docs.google.com/forms/d/e/1FAIpQLSfS1M76s_DbMQGE2wzsIJqL5XJ7buAO43hDtiL8CFb2YU2e8Q/viewform?c=0&w=1";
+              };
+              </script>
+            </div>
+          </div> 
+        </div>
+        <div class="col-lg-4">
+          <div class="img-wrapper">
+              <a href="/~wujonathan/Step_3/">
+            <img src="pics/index_04a.png" id="img3" alt="index_04a" height="840" onmouseout="FP_swapImgRestore()" onmouseover="FP_swapImg(1,1,/*id*/'img3',/*url*/'pics/index_04b.png'); FP_swapImg(1,1,/*id*/'img3',/*url*/'pics/index_04b.png')" width="430"></a>
+            <div class="img-overlay">
+              <button id="step3" class = "btn btn-success">Optimize</button>
+              <script type="text/javascript">
+              document.getElementById("step3").onclick = function () {
+                location.href = "/~wujonathan/Step_3/";
+              };
+              </script>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="userLoginDetails">
+    <div>
+      <form id="userlogin">
+        Username <input type="text"  name="username" id="username">  <br>
+        Password  <input type="password"  name="password" id="password">  <br>
+        <input id="submitLogin" type="button" name="submit" value="Login"/>
+      </form>
+      <div id="loginUserMsg"></div> 
+    </div>
+  </div>
+  <li><div class="logins">
+        <button id="signup" class="logins btn btn-link" data-tog = "1">Check out our math engine</button>
+        <script type="text/javascript">
+            document.getElementById("signup").onclick = function () {
+                location.href = "";
+              };
+              </script>
+      </div></li>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="mainpage.js"></script>
+</body>
+</html>
